@@ -14,7 +14,7 @@ const PhotoDetail = (props) => {
 
     		<p>
     			Photo author:
-    			<a href={props.photo.user.links.html}> {props.photo.user.username}</a>
+    			<a href={props.photo.user.links.html} target="_blank"> {props.photo.user.username}</a>
     		</p>
     	</li>
 
