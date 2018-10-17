@@ -7,9 +7,9 @@ const PhotoDetail = (props) => {
 		return(
 
       <li style={{listStyleType: 'none'}}>
-      <a href={props.photo.urls.thumb} download>
-			<img src={props.photo.urls.thumb} />
-		    </a>
+      <div onClick={()=>props.onClick(props.photo)}>
+			   <img src={props.photo.urls.thumb} />
+		  </div>
 
 
     		<p>

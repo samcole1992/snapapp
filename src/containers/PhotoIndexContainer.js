@@ -23,14 +23,14 @@ class PhotoIndexContainer extends Component {
     selectPhoto = (photo) => {
       const {history} = this.props
       this.props.selectPhoto(photo)
-      // history.push(`/photos/${photo.id}`)
+      history.push(`/photos/${photo.id}`)
     }
 
 
   render() {
       return (
         <div>
-        
+
         <PhotoIndex
         error ={this.props.error}
         photos={this.props.photos}
@@ -60,4 +60,4 @@ function mapDispatchToProps(dispatch) {
 
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(PhotoIndexContainer);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(PhotoIndexContainer));
